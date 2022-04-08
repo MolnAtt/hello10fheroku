@@ -120,11 +120,8 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-# INNEN szedegeti össze azokat a statikus fájlokat, amelyek nem tartoznak egyetlen apphoz sem:
-
-
 # IDE fogja collectelni a collectstatic
-STATIC_ROOT = BASE_DIR / 'static'  
+STATIC_ROOT = BASE_DIR / 'static'
 #régebbi django-hoz: 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
