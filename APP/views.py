@@ -16,4 +16,9 @@ def apigetbarmi(request):
     # context = {"ize": 7}
     return Response('Szia!')
 
+@api_view(['POST'])
+def apigetbarmi2(request):
+    print(request.data)
+    return Response('megvan')
+
     

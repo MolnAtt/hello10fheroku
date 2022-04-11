@@ -4,12 +4,19 @@ document.addEventListener('DOMContentLoaded', main);
 function main(){
     alert('hali');
     let gomb = document.querySelector('#gomb');
-    gomb.addEventListener('click', katt)
+    // gomb.addEventListener('click', katt)
+    gomb.addEventListener('click', katt2)
 }
 
 async function katt()
 {
     let result = await olvaso_fetch('http://127.0.0.1:8000/api/get/barmi/');
+    alert(result);
+}
+
+async function katt2()
+{
+    let result = await kuldo_fetch('http://127.0.0.1:8000/api/post/barmi/', {'titkos_uzenet': 'száll a szélben'});
     alert(result);
 }
 
